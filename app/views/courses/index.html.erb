@@ -1,14 +1,27 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Courses</h1>
+<h1>課程列表</h1>
 
-<div id="courses">
-  <% @courses.each do |course| %>
-    <%= render course %>
-    <p>
-      <%= link_to "Show this course", course %>
-    </p>
-  <% end %>
-</div>
+<table>
+  <thead>
+    <tr>
+      <th>名稱</th>
+      <th>描述</th>
+      <th>編輯</th>
+      <th clospan="3"></th>
+    </tr>
+  </thead>
 
-<%= link_to "New course", new_course_path %>
+  <tbody>
+    <% @courses.each do |course| %>
+      <tr>
+        <%= render course %>
+        <td><%= link_to "進入課程", course %></td>
+        <td><%= link_to "編輯", edit_course_path(course) %></td>
+        <td><%= link_to "刪除", course, method: :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "新增課程", new_course_path %>

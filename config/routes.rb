@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  resources :units
-  resources :courses
+  resources :courses do
+    resources :units 
+  end
+  root "courses#index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

@@ -3,8 +3,8 @@
 <%= render @course %>
 
 <div>
-  <%= link_to "Edit this course", edit_course_path(@course) %> |
-  <%= link_to "Back to courses", courses_path %>
+  <%= link_to "編輯課程", edit_course_path(@course) %> |
+  <%= link_to "回到課程列表", courses_path %>
 
-  <%= button_to "Destroy this course", @course, method: :delete %>
+  <%= button_to "刪除課程", @course, method: :delete %>
 </div>
