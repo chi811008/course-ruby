@@ -2,21 +2,22 @@
 
 <h1>單元列表</h1>
 
-
-<table>
+<table class="table">
   <thead>
     <tr>
-      <th>單元</th>
+      <th>單元順序</th>
       <th>名稱</th>
-      <th>描述</th>
-      <th clospan="3"></th>
+      <th>說明</th>
+      <th>內容</th>
+      <th>編輯</th>
+      <th clospan="4"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @course.unit.each do |unit| %>
       <tr>
-        <td><%= render unit %></td>
+        <%= render unit %>
         <td><%= link_to "查看單元", course_unit_path(@course, unit) %></td>
       </tr>
     <% end %>

@@ -70,6 +70,6 @@ class UnitsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def unit_params
-      params.require(:unit).permit(:number, :name, :course_id, :description)
+      params.require(:unit).permit(:order, :name, :course_id, :description, :content)
     end
 end

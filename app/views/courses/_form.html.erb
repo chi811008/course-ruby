@@ -12,16 +12,21 @@
   <% end %>
 
   <div>
-    <%= form.label :name, style: "display: block" %>
+    <%= form.label :name, "名稱", style: "display: block" %>
     <%= form.text_field :name %>
   </div>
 
   <div>
-    <%= form.label :description, style: "display: block" %>
+    <%= form.label :description, "說明", style: "display: block" %>
     <%= form.text_area :description %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.label :lecturer_name, "講師", style: "display: block" %>
+    <%= form.text_field :lecturer_name  %>
+  </div>
+
+  <div>
+    <%= form.submit "新增課程"%>
   </div>
 <% end %>

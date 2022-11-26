@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_26_033748) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_26_044944) do
   create_table "courses", force: :cascade do |t|
     t.string "name", null: false
     t.text "description"
@@ -20,12 +20,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_26_033748) do
   end
 
   create_table "units", force: :cascade do |t|
-    t.integer "number"
-    t.string "name"
+    t.string "name", null: false
     t.integer "course_id"
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "order", null: false
+    t.text "content", null: false
   end
 
 end
