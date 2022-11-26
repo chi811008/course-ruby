@@ -1,14 +1,26 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Units</h1>
+<h1>單元列表</h1>
 
-<div id="units">
-  <% @units.each do |unit| %>
-    <%= render unit %>
-    <p>
-      <%= link_to "Show this unit", unit %>
-    </p>
-  <% end %>
-</div>
 
-<%= link_to "New unit", new_unit_path %>
+<table>
+  <thead>
+    <tr>
+      <th>單元</th>
+      <th>名稱</th>
+      <th>描述</th>
+      <th clospan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @course.unit.each do |unit| %>
+      <tr>
+        <td><%= render unit %></td>
+        <td><%= link_to "查看單元", course_unit_path(@course, unit) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "新增單元", new_course_unit_path %>

@@ -3,8 +3,8 @@
 <%= render @unit %>
 
 <div>
-  <%= link_to "Edit this unit", edit_unit_path(@unit) %> |
-  <%= link_to "Back to units", units_path %>
+  <%= link_to "Edit this unit", edit_course_unit_path(@course, @unit) %> |
+  <%= link_to "Back to units", course_units_path %>
 
-  <%= button_to "Destroy this unit", @unit, method: :delete %>
+  <%= button_to "Destroy this unit", course_unit_path, method: :delete %>
 </div>
