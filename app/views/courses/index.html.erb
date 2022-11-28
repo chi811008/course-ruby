@@ -1,0 +1,23 @@
+<h1>課程列表</h1>
+
+<table class="table table-striped table-bordered table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th>名稱</th>
+      <th>說明</th>
+      <th>講師</th>
+      <th colspan="1"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @courses.each do |course| %>
+      <tr>
+        <%= render course %>
+        <td><%= link_to "進入課程", course, class:"btn btn-primary btn-sm" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "新增課程", new_course_path, class:"btn btn-secondary" %>
