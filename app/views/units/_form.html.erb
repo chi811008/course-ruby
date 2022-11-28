@@ -11,27 +11,27 @@
     </div>
   <% end %>
 
-  <div>
+  <div class="field form-group">
     <%= form.label :order, "順序", style: "display: block" %>
-    <%= form.number_field :order %>
+    <%= form.number_field :order, class:"form-control" %>
   </div>
 
-  <div>
+  <div class="field form-group">
     <%= form.label :name, "名稱", style: "display: block" %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class:"form-control" %>
   </div>
 
-  <div>
+  <div class="field form-group">
     <%= form.label :description, "說明", style: "display: block" %>
-    <%= form.text_area :description %>
+    <%= form.text_area :description, class:"form-control" %>
   </div>
 
-  <div>
+  <div class="field form-group">
     <%= form.label :content, "內容", style: "display: block" %>
-    <%= form.text_area :content %>
+    <%= form.text_area :content, class:"form-control" %>
   </div>
 
-  <div>
-    <%= form.submit "儲存" %>
+  <div class="field form-group">
+    <%= form.submit "儲存", class:"btn btn-secondary" %>
   </div>
 <% end %>

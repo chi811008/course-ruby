@@ -1,27 +1,10 @@
-<p style="color: green"><%= notice %></p>
-
-<h1><%= @unit.name %></h1>
-
-<table class="table table-striped table-bordered table-hover">
-  <thead class="thead-dark">
-    <tr>
-      <th>順序</th>
-      <th>名稱</th>
-      <th>說明</th>
-      <th>內容</th>
-      <th colspan="2"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <%= render @unit %>
-      <td><%= link_to "編輯單元", edit_course_unit_path(@course, @unit) %></td>
-      <td><%= link_to "刪除單元", course_unit_path, data: {"turbo-method": :delete} %></td>
-    </tr>
-  </tbody>
-</table>
-
+<div class="jumbotron">
+  <h1 class="display-4"><%= @unit.name %></h1>
+  <p class="lead"><%= @unit.description %></p>
+  <p><%= @unit.content %></p>
+  <%= link_to "編輯單元", edit_course_unit_path(@course, @unit), class:"btn btn-primary" %>
+  <%= link_to "刪除單元", course_unit_path, data: {"turbo-method": :delete}, class:"btn btn-danger" %>
+</div>
 
 <div>
   <%= link_to "回到單元列表", course_units_path, class:"btn btn-secondary" %>

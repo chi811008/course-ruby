@@ -25,7 +25,7 @@ class UnitsController < ApplicationController
     @unit = @course.unit.build(unit_params)
     respond_to do |format|
       if @unit.save
-        format.html { redirect_to course_units_url, notice: "Unit was successfully created." }
+        format.html { redirect_to course_units_url, notice: "單元建立成功" }
         format.json { render :show, status: :created, location: @unit }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class UnitsController < ApplicationController
   def update
     respond_to do |format|
       if @unit.update(unit_params)
-        format.html { redirect_to course_units_url(@course, @unit), notice: "Unit was successfully updated." }
+        format.html { redirect_to course_unit_url(@course, @unit), notice: "單元更新成功" }
         format.json { render :show, status: :ok, location: @unit }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,7 +52,7 @@ class UnitsController < ApplicationController
     @unit.destroy
 
     respond_to do |format|
-      format.html { redirect_to course_units_url, notice: "Unit was successfully destroyed." }
+      format.html { redirect_to course_units_url, notice: "單元刪除成功" }
       format.json { head :no_content }
     end
   end
