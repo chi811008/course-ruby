@@ -1,10 +1,9 @@
-<h1>Editing course</h1>
+<h1>編輯課程</h1>
 
 <%= render "form", course: @course %>
 
 <br>
 
 <div>
-  <%= link_to "顯示此課程", @course %> |
-  <%= link_to "回到課程列表", courses_path %>
+  <%= link_to "回到此課程", @course, class:"btn btn-secondary" %>
 </div>

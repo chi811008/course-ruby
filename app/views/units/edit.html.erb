@@ -5,6 +5,5 @@
 <br>
 
 <div>
-  <%= link_to "顯示此單元", course_unit_path(@unit) %> |
-  <%= link_to "回到單元列表", course_units_path %>
+  <%= link_to "回到此單元", course_unit_path(@course, @unit), class:"btn btn-secondary" %>
 </div>
