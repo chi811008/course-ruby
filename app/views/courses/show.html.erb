@@ -5,7 +5,7 @@
   <p><%= @course.lecturer_name %></p>
   <%= link_to "進入課程單元", course_units_path(@course), class:"btn btn-primary" %> 
   <%= link_to "編輯課程", edit_course_path(@course), class:"btn btn-primary" %> 
-  <%= link_to "刪除課程", course_path, data: {"turbo-method": :delete}, class:"btn btn-danger" %>
+  <%= link_to "刪除課程", course_path, data: {"turbo-method": :delete, "turbo_confirm": "確定刪除？"}, class:"btn btn-danger" %>
 </div>
 
 <div>

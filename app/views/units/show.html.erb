@@ -3,7 +3,7 @@
   <p class="lead"><%= @unit.description %></p>
   <p><%= @unit.content %></p>
   <%= link_to "編輯單元", edit_course_unit_path(@course, @unit), class:"btn btn-primary" %>
-  <%= link_to "刪除單元", course_unit_path, data: {"turbo-method": :delete}, class:"btn btn-danger" %>
+  <%= link_to "刪除單元", course_unit_path, data: {"turbo-method": :delete, "turbo_confirm": "確定刪除？"}, class:"btn btn-danger" %>
 </div>
 
 <div>
